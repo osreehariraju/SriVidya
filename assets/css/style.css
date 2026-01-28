@@ -1,1 +1,77 @@
-TO be do
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --gold: #d4af37;
+    --text: #e0e0e0;
+    --red: #cf6679;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+#count-display {
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--gold);
+    margin: 20px 0;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 20px 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--card-bg);
+    color: var(--text);
+    transition: transform 0.1s, background 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+    background: #333;
+}
+
+.btn-plus { border-bottom: 4px solid var(--gold); }
+.btn-minus { 
+    border-bottom: 4px solid var(--red); 
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.settings {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+select, .btn-add {
+    background: var(--card-bg);
+    color: var(--text);
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
